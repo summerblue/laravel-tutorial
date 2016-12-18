@@ -4344,13 +4344,13 @@ a.thumbnail.active {
   .alert-success .alert-link {
     color: #2b542c; }
 
-.alert-info {
+.alert-info, .alert-status {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #31708f; }
-  .alert-info hr {
+  .alert-info hr, .alert-status hr {
     border-top-color: #a6e1ec; }
-  .alert-info .alert-link {
+  .alert-info .alert-link, .alert-status .alert-link {
     color: #245269; }
 
 .alert-warning {
@@ -5792,23 +5792,24 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777; }
-
-footer a {
-  color: #555; }
-
-footer a:hover {
-  color: #222; }
-
-footer small {
-  float: left; }
-
-footer ul {
-  float: right;
-  list-style: none; }
-
-footer ul li {
-  float: left;
-  margin-left: 15px; }
+  footer a {
+    color: #555; }
+  footer a:hover {
+    color: #222; }
+  footer small {
+    float: left; }
+  footer ul {
+    float: right;
+    list-style: none; }
+    footer ul li {
+      float: left;
+      margin-left: 15px; }
+  footer img.brand-icon {
+    width: 17px;
+    height: 17px; }
+  footer .slogon {
+    font-size: 13px;
+    font-weight: bold; }
 
 /* sidebar */
 aside section {

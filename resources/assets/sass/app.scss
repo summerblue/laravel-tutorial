@@ -20,6 +20,10 @@ textarea {
   text-align: center;
 }
 
+.alert-status {
+  @extend .alert-info;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -81,28 +85,38 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
-}
 
-footer a {
-  color: #555;
-}
+  a {
+    color: #555;
+  }
 
-footer a:hover {
-  color: #222;
-}
+  a:hover {
+    color: #222;
+  }
 
-footer small {
-  float: left;
-}
+  small {
+    float: left;
+  }
 
-footer ul {
-  float: right;
-  list-style: none;
-}
+  ul {
+    float: right;
+    list-style: none;
 
-footer ul li {
-  float: left;
-  margin-left: 15px;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+
+  img.brand-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .slogon {
+    font-size: 13px;
+    font-weight: bold;
+  }
 }
 
 /* sidebar */
