@@ -56,4 +56,15 @@ class User extends Model implements AuthenticatableContract,
     {
         $this->attributes['password'] = bcrypt($password);
     }
+
+    public function statuses()
+    {
+        return $this->hasMany(Status::class);
+    }
+
+    public function feed()
+    {
+        return $this->statuses()
+                    ->orderBy('created_at', 'desc');
+    }
 }
