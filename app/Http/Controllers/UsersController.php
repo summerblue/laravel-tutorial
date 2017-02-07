@@ -56,7 +56,7 @@ class UsersController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request->password,
+            'password' => bcrypt($request->password),
         ]);
 
         $this->sendEmailConfirmationTo($user);
@@ -81,10 +81,11 @@ class UsersController extends Controller
         $user = User::findOrFail($id);
         $this->authorize('update', $user);
 
-        $data = array_filter([
-            'name' => $request->name,
-            'password' => $request->password,
-        ]);
+        $data = [];
+        $data['name'] = $request->name;
+        if ($request->password) {
+            $data['password'] = bcrypt($request->password);
+        }
         $user->update($data);
 
         session()->flash('success', '个人资料更新成功！');
